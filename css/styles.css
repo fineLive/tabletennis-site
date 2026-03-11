@@ -1,0 +1,1192 @@
+/* ================================
+   基础样式重置
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================================
+   导航栏
+   ================================ */
+header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================================
+   页面头部
+   ================================ */
+.page-header {
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+    padding: 150px 5% 80px;
+    text-align: center;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* ================================
+   英雄区域
+   ================================ */
+.hero {
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.hero-content {
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ================================
+   按钮样式
+   ================================ */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: white;
+    color: #1abc9c;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #1abc9c;
+}
+
+.btn-link {
+    color: #e74c3c;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.btn-link:hover {
+    color: #c0392b;
+}
+
+/* ================================
+   通用区域样式
+   ================================ */
+.section {
+    padding: 5rem 5%;
+}
+
+.section-alt {
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ================================
+   卡片网格
+   ================================ */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-card {
+    display: block;
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    padding: 0.5rem 0;
+    color: #666;
+    border-bottom: 1px dashed #eee;
+}
+
+.card ul li:last-child {
+    border-bottom: none;
+}
+
+/* ================================
+   规则列表
+   ================================ */
+.rules-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.rule-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.rule-item:hover {
+    background: #e9ecef;
+}
+
+.rule-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.rule-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.rule-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* ================================
+   技术卡片
+   ================================ */
+.technique-card {
+    text-align: center;
+}
+
+.technique-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tech-desc {
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.tech-note {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.technique-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tech-detail-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tech-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tech-header h3 {
+    font-size: 1.3rem;
+}
+
+.tech-icon {
+    font-size: 2rem;
+}
+
+.tech-detail-card .tech-desc {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+}
+
+.tech-detail-card h4 {
+    padding: 0.5rem 1.5rem;
+    color: #e74c3c;
+    margin-top: 1rem;
+}
+
+.tech-detail-card ol,
+.tech-detail-card ul {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.tech-detail-card li {
+    padding: 0.3rem 0;
+    color: #666;
+}
+
+/* ================================
+   装备相关
+   ================================ */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.equipment-item {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.equipment-item:hover {
+    transform: scale(1.05);
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.equipment-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.equipment-item p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.equipment-item h4 {
+    color: #e74c3c;
+    margin: 1rem 0 0.5rem;
+    text-align: left;
+}
+
+.equipment-item ul {
+    text-align: left;
+}
+
+.equipment-item li {
+    padding: 0.3rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.equipment-detail {
+    margin-bottom: 3rem;
+}
+
+.equipment-intro {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.equipment-icon-large {
+    font-size: 5rem;
+    flex-shrink: 0;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.accessory-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.accessory-card:hover {
+    transform: translateY(-5px);
+}
+
+.accessory-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.accessory-card h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.accessory-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   数据统计
+   ================================ */
+.stats-section {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.stats-section h2 {
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 2rem;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ================================
+   首页球员预览卡片
+   ================================ */
+.player-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.player-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.player-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: #f0f0f0;
+}
+
+.player-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.player-card:hover .player-card-image img {
+    transform: scale(1.05);
+}
+
+.player-avatar {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.player-card h3 {
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.player-title {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.player-desc {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* ================================
+   运动员页面
+   ================================ */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.player-detail-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.player-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.player-detail-card:hover .player-image img {
+    transform: scale(1.05);
+}
+
+.player-flag {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.player-info {
+    padding: 1.5rem;
+}
+
+.player-info h3 {
+    color: #e74c3c;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.player-nickname {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.player-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-badge {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.player-desc {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.player-achievements h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.player-achievements ul {
+    padding-left: 1rem;
+}
+
+.player-achievements li {
+    padding: 0.3rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.grand-slam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grand-slam-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grand-slam-card h3 {
+    color: #e74c3c;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.slam-list {
+    list-style: none;
+}
+
+.slam-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slam-list li:last-child {
+    border-bottom: none;
+}
+
+.player-name {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.country {
+    font-size: 1.2rem;
+}
+
+/* ================================
+   赛事页面
+   ================================ */
+.tournaments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tournament-card-alt {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.tournament-card-alt:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tournament-card-alt .tournament-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tournament-card-alt h3 {
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.tournament-card-alt p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tournament-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.tournament-detail-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.tournament-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tournament-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.tournament-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.tournament-detail-card:hover .tournament-image img {
+    transform: scale(1.05);
+}
+
+.tournament-header .tournament-icon {
+    font-size: 3rem;
+}
+
+.tournament-header h3 {
+    flex: 1;
+    font-size: 1.8rem;
+}
+
+.tournament-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.tournament-body {
+    padding: 2rem;
+}
+
+.tournament-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-item strong {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+.info-item span {
+    color: #666;
+}
+
+.tournament-desc {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.tournament-champions h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.champions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.champion {
+    background: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.china-olympic-stats {
+    overflow-x: auto;
+}
+
+.stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.stats-table th {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    font-weight: 500;
+}
+
+.stats-table tr:hover {
+    background: #f8f9fa;
+}
+
+.stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ================================
+   首页赛事预览
+   ================================ */
+.tournament-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tournament-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.tournament-card:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tournament-card .tournament-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.tournament-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.tournament-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tournament-card .tournament-tag {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+/* ================================
+   页脚
+   ================================ */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-section h4 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    padding: 0.3rem 0;
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e74c3c;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+    color: #aaa;
+}
+
+/* ================================
+   动画
+   ================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   响应式设计
+   ================================ */
+@media (max-width: 992px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #c0392b;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .content-grid,
+    .equipment-grid,
+    .players-grid,
+    .tournaments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rule-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tournament-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tournament-info {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .player-stats {
+        justify-content: center;
+    }
+
+    .champions-list {
+        justify-content: center;
+    }
+}
