@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   设计令牌 —— 体育杂志风
+   纸白 / 墨黑打底，中国红做强调，球台蓝绿做辅助
+   ============================================================ */
+:root {
+  --background: #f6f4ef;
+  --foreground: #1b1917;
+  --card: #fffefb;
+  --card-foreground: #1b1917;
+  --popover: #fffefb;
+  --popover-foreground: #1b1917;
+  --primary: #c1121f;
+  --primary-foreground: #fdfbf7;
+  --secondary: #ede9df;
+  --secondary-foreground: #33302a;
+  --muted: #efece4;
+  --muted-foreground: #6e685c;
+  --accent: #0f766e;
+  --accent-foreground: #ecfdf5;
+  --destructive: #b91c1c;
+  --destructive-foreground: #fef2f2;
+  --border: #e3ded1;
+  --input: #e3ded1;
+  --ring: #c1121f;
+  --radius: 0.5rem;
+  --chart-1: #c1121f;
+  --chart-2: #0f766e;
+  --chart-3: #d97706;
+  --chart-4: #1d4ed8;
+  --chart-5: #64748b;
+}
+
+.dark {
+  --background: #131210;
+  --foreground: #eceae3;
+  --card: #1b1917;
+  --card-foreground: #eceae3;
+  --popover: #1b1917;
+  --popover-foreground: #eceae3;
+  --primary: #e5383b;
+  --primary-foreground: #fdfbf7;
+  --secondary: #262420;
+  --secondary-foreground: #d6d1c4;
+  --muted: #262420;
+  --muted-foreground: #a29a8c;
+  --accent: #134e48;
+  --accent-foreground: #ccfbf1;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fee2e2;
+  --border: #2e2b26;
+  --input: #2e2b26;
+  --ring: #e5383b;
+  --chart-1: #e5383b;
+  --chart-2: #2dd4bf;
+  --chart-3: #f59e0b;
+  --chart-4: #60a5fa;
+  --chart-5: #94a3b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+}

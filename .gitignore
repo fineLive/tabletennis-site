@@ -1,1 +1,17 @@
+# 依赖与构建产物
+node_modules/
+.next/
+out/
+.wrangler/
+
+# 类型声明由 next 自动生成
+next-env.d.ts
+
+# 系统与编辑器
 /.idea/
+.DS_Store
+Thumbs.db
+
+# 日志与临时文件
+npm-debug.log*
+*.tsbuildinfo
