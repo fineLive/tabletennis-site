@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tabletennis-site",
+  "compatibility_date": "2025-09-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    // Next.js 静态导出产物（npm run build 生成）
+    "directory": "./out",
+    // 未匹配路由时回退到 out/404.html
+    "not_found_handling": "404-page"
+  }
+}
