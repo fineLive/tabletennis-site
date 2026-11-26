@@ -12,11 +12,15 @@
 npm install       # 安装依赖
 npm run dev       # 开发模式 http://localhost:3000
 npm run build     # 生产构建（静态导出到 out/）
+npm run deploy    # 构建 + 部署到 Cloudflare Workers
 npm run typecheck # 类型检查
 ```
 
-构建产物 `out/` 是纯静态文件，可直接部署到 Cloudflare Workers、GitHub Pages、
+构建产物 `out/` 是纯静态文件（不入库），可直接部署到 Cloudflare Workers、GitHub Pages、
 Vercel 等任意静态托管（仓库内 `wrangler.jsonc` 已按 Cloudflare Workers 配置）。
+
+**Cloudflare Workers Builds 部署命令请配置为 `npm run deploy`**
+（即先构建生成 `out/`，再执行 `wrangler deploy`；只跑 `wrangler deploy` 会因找不到 `out/` 而失败）。
 
 ## 📁 项目结构
 
